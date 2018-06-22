@@ -12,9 +12,9 @@ print('''
                                                                            |___/                        
 ''')
 
-choice = int(input("\nWarning: Save your important works before proceeding further\n\n1. {}\n2. {}\n\nEnter your choice: ".format(*options)))
-if choice in [1, 2]:
-	time = input("\nEnter time (in ms) after which you want to {}: ".format(options[choice-1]))
+choice = input("\nWarning: Save your important works before proceeding further\n\n1. {}\n2. {}\n\nEnter your choice: ".format(*options))
+if choice in ['1', '2']:
+	time = input("\nEnter time (in ms) after which you want to {}: ".format(options[int(choice)-1]))
 	try:
 		t = int(time)
 		if t < 0:
